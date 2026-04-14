@@ -47,6 +47,8 @@ function main (fileNames: string[]): void {
         .catch((err) => {
             if (err.code === 'ENOENT')
                 console.log(`File ${fileName} not found`);
+             else
+        console.log(`Error: ${err.message}`);
         });
     });
 }
